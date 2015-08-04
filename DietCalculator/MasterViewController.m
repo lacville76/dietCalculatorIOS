@@ -9,8 +9,10 @@
 #import "MasterViewController.h"
 
 #import "DetailViewController.h"
-
+#import "AppDelegate.h"
+#import "Menu.h"
 @interface MasterViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *Day;
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 @end
 
@@ -29,6 +31,13 @@
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
+    UIBarButtonItem *produktbutton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
+    self.navigationItem.backBarButtonItem = produktbutton
+    ;
+     self.navigationItem.backBarButtonItem.title=@"Cofnij";
+  // self.view.backgroundColor = [UIColor colorWithRed:216.0f/255.0f green:243.0f/255.0f blue:255.0f/255.0f alpha:1.0f];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -40,14 +49,9 @@
 - (void)insertNewObject:(id)sender
 {
     NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
-    NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
-    NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
-    
-    // If appropriate, configure the new managed object.
-    // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
-    [newManagedObject setValue:[NSDate date] forKey:@"timeStamp"];
-    
-    // Save the context.
+if([_Day.text length] !=0)
+{  [Menu dodajDzien:_Day.text];
+   
     NSError *error = nil;
     if (![context save:&error]) {
          // Replace this implementation with code to handle the error appropriately.
@@ -55,6 +59,16 @@
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }
+}
+    else
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Powiadomienie" message:@"Uzupelnij wymagane pola" delegate:self cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+        return;
+
+    }
+    
 }
 
 #pragma mark - Table View
@@ -82,7 +96,9 @@
     // Return NO if you do not want the specified item to be editable.
     return YES;
 }
-
+- (IBAction)zamknij:(id)sender {
+    [sender resignFirstResponder];
+}
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
@@ -105,12 +121,12 @@
     return NO;
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
-        [[segue destinationViewController] setDetailItem:object];
+       [[segue destinationViewController] setDetailItem:object];
     }
 }
 
@@ -124,14 +140,14 @@
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     // Edit the entity name as appropriate.
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Event" inManagedObjectContext:self.managedObjectContext];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Menu" inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entity];
     
     // Set the batch size to a suitable number.
     [fetchRequest setFetchBatchSize:20];
     
     // Edit the sort key as appropriate.
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"timeStamp" ascending:NO];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"dzien" ascending:NO];
     NSArray *sortDescriptors = @[sortDescriptor];
     
     [fetchRequest setSortDescriptors:sortDescriptors];
@@ -212,11 +228,10 @@
     [self.tableView reloadData];
 }
  */
-
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = [[object valueForKey:@"timeStamp"] description];
+    cell.textLabel.text = [[object valueForKey:@"dzien"] description];
 }
 
 @end

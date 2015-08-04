@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface DetailViewController : UIViewController
+<UITableViewDelegate,UITableViewDataSource>
+
 
 @property (strong, nonatomic) id detailItem;
-
+@property (strong, nonatomic) NSArray *productsArray;
 @property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 @end

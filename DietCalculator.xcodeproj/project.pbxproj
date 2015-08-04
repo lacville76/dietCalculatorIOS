@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2EA4E899193CFD4B004B051C /* ProduktManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA4E898193CFD4B004B051C /* ProduktManageViewController.m */; };
+		2EBB1F57193E465900C4E3A7 /* DietCalcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EBB1F56193E465900C4E3A7 /* DietCalcViewController.m */; };
 		2ED0BC731923D27E002861CE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ED0BC721923D27E002861CE /* UIKit.framework */; };
 		2ED0BC751923D27E002861CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ED0BC741923D27E002861CE /* Foundation.framework */; };
 		2ED0BC771923D27E002861CE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ED0BC761923D27E002861CE /* CoreGraphics.framework */; };
@@ -27,6 +29,8 @@
 		2ED0BCA21923D27F002861CE /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ED0BC781923D27E002861CE /* CoreData.framework */; };
 		2ED0BCAA1923D27F002861CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2ED0BCA81923D27F002861CE /* InfoPlist.strings */; };
 		2ED0BCAD1923D27F002861CE /* DietCalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ED0BCAC1923D27F002861CE /* DietCalculatorTests.m */; };
+		2ED78AE3193B5C7D00297379 /* Produkt.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ED78AE2193B5C7D00297379 /* Produkt.m */; };
+		2ED78AE6193B5CDF00297379 /* Menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ED78AE5193B5CDF00297379 /* Menu.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +43,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		2E79084219464EB000AE2CC9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		2EA4E897193CFD4B004B051C /* ProduktManageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProduktManageViewController.h; sourceTree = "<group>"; };
+		2EA4E898193CFD4B004B051C /* ProduktManageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProduktManageViewController.m; sourceTree = "<group>"; };
+		2EBB1F55193E465900C4E3A7 /* DietCalcViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DietCalcViewController.h; sourceTree = "<group>"; };
+		2EBB1F56193E465900C4E3A7 /* DietCalcViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DietCalcViewController.m; sourceTree = "<group>"; };
 		2ED0BC6F1923D27E002861CE /* DietCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DietCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ED0BC721923D27E002861CE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2ED0BC741923D27E002861CE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -66,6 +86,10 @@
 		2ED0BCA91923D27F002861CE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2ED0BCAB1923D27F002861CE /* DietCalculatorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DietCalculatorTests.h; sourceTree = "<group>"; };
 		2ED0BCAC1923D27F002861CE /* DietCalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DietCalculatorTests.m; sourceTree = "<group>"; };
+		2ED78AE1193B5C7D00297379 /* Produkt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Produkt.h; sourceTree = "<group>"; };
+		2ED78AE2193B5C7D00297379 /* Produkt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Produkt.m; sourceTree = "<group>"; };
+		2ED78AE4193B5CDE00297379 /* Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Menu.h; sourceTree = "<group>"; };
+		2ED78AE5193B5CDF00297379 /* Menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Menu.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +125,7 @@
 				2ED0BCA51923D27F002861CE /* DietCalculatorTests */,
 				2ED0BC711923D27E002861CE /* Frameworks */,
 				2ED0BC701923D27E002861CE /* Products */,
+				2ED0BC7B1923D27E002861CE /* Supporting Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +153,10 @@
 		2ED0BC7A1923D27E002861CE /* DietCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				2EA4E897193CFD4B004B051C /* ProduktManageViewController.h */,
+				2EA4E898193CFD4B004B051C /* ProduktManageViewController.m */,
+				2EBB1F55193E465900C4E3A7 /* DietCalcViewController.h */,
+				2EBB1F56193E465900C4E3A7 /* DietCalcViewController.m */,
 				2ED0BC831923D27E002861CE /* AppDelegate.h */,
 				2ED0BC841923D27E002861CE /* AppDelegate.m */,
 				2ED0BC8C1923D27F002861CE /* MainStoryboard.storyboard */,
@@ -136,7 +165,10 @@
 				2ED0BC951923D27F002861CE /* DetailViewController.h */,
 				2ED0BC961923D27F002861CE /* DetailViewController.m */,
 				2ED0BC8F1923D27F002861CE /* DietCalculator.xcdatamodeld */,
-				2ED0BC7B1923D27E002861CE /* Supporting Files */,
+				2ED78AE4193B5CDE00297379 /* Menu.h */,
+				2ED78AE5193B5CDF00297379 /* Menu.m */,
+				2ED78AE1193B5C7D00297379 /* Produkt.h */,
+				2ED78AE2193B5C7D00297379 /* Produkt.m */,
 			);
 			path = DietCalculator;
 			sourceTree = "<group>";
@@ -153,6 +185,7 @@
 				2ED0BC8A1923D27F002861CE /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			path = DietCalculator;
 			sourceTree = "<group>";
 		};
 		2ED0BCA51923D27F002861CE /* DietCalculatorTests */ = {
@@ -184,6 +217,7 @@
 				2ED0BC6B1923D27E002861CE /* Sources */,
 				2ED0BC6C1923D27E002861CE /* Frameworks */,
 				2ED0BC6D1923D27E002861CE /* Resources */,
+				2E79084219464EB000AE2CC9 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -289,6 +323,10 @@
 				2ED0BC911923D27F002861CE /* DietCalculator.xcdatamodeld in Sources */,
 				2ED0BC941923D27F002861CE /* MasterViewController.m in Sources */,
 				2ED0BC971923D27F002861CE /* DetailViewController.m in Sources */,
+				2ED78AE3193B5C7D00297379 /* Produkt.m in Sources */,
+				2ED78AE6193B5CDF00297379 /* Menu.m in Sources */,
+				2EA4E899193CFD4B004B051C /* ProduktManageViewController.m in Sources */,
+				2EBB1F57193E465900C4E3A7 /* DietCalcViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,7 +438,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DietCalculator/DietCalculator-Prefix.pch";
 				INFOPLIST_FILE = "DietCalculator/DietCalculator-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -411,7 +451,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DietCalculator/DietCalculator-Prefix.pch";
 				INFOPLIST_FILE = "DietCalculator/DietCalculator-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -469,6 +511,7 @@
 				2ED0BCB21923D27F002861CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2ED0BCB31923D27F002861CE /* Build configuration list for PBXNativeTarget "DietCalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -477,6 +520,7 @@
 				2ED0BCB51923D27F002861CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
